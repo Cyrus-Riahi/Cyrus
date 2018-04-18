@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="site.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            $(document).ready(function()
+            {
+                $("#toggleButton").click(function()
+                {
+                    $(".lorem").toggle(400);
+                });
+            });
+        </script>
+        <title>
+            Cyrus Riahi
+        </title>
+    </head>
+    <body>
+        <script>
+            function colorSwap()
+            {
+                if(document.getElementById("sidebar").style.backgroundColor == "lightcyan")
+                {
+                    document.getElementById("sidebar").style.backgroundColor = "#fff";
+                }
+                else
+                {
+                    document.getElementById("sidebar").style.backgroundColor = "lightcyan";
+                }
+            }
+        </script>
+        <div class ="container-fluid">
+        
+            <div class ="sidebarMenu" id="sidebar">
+                <div class="sidebar_content">
+                    <div class ="sidebar_link">
+                        <a href="index.html">
+                            <h3 style = "line-height: 28px;">Home</h3>
+                        </a>
+                    </div>
+                    <div class ="sidebar_link">
+                        <a href="contactRequest.php">
+                            <h3 style = "line-height: 28px;">SQL Test</h3>
+                        </a>
+                    </div>
+                    <div class ="sidebar_link">
+                        <a href="about.html">
+                            <h3 style = "line-height: 28px;">About</h3>
+                        </a>
+                    </div>
+                    <div class ="sidebar_link">
+                        <a href="contact.html">
+                            <h3 style = "line-height: 28px;">Contact</h3>
+                        </a>
+                    </div>
+<!--                    <div class ="sidebar_link">
+                        <a href="bootstrapTest.html">
+                            <h3 style = "line-height: 28px;">Bootstrap Test</h3>
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+            <div class = "centered" style="margin-left:20%; padding:1px 16px; position: relative; display: block;">
+                <h1>Cyrus&emsp;Riahi</h1>
+                <h4 class="centered" style = "text-transform: uppercase;">
+                    Software Engineer | San Francisco, CA<br/>
+                    I will be blown away if this gets me a job
+                </h4>
+<!--            </div>-->
+        
+
+<!--        <div style="margin-left:25%;padding:1px 16px;">-->
+                <h2>Full-height Side Nav</h2>
+                <h3>Sidenav will stay on the left while content on the right is scrolled through<br/>
+                This will be updated to be dynamic in the future. for now, sidebar items are just static
+                links to the individual pages.</h3>
+                <p class ="lorem">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus risus, sollicitudin vitae dignissim in, malesuada non erat. Nulla eget libero facilisis enim placerat semper a ut sem. Ut vel porta odio. Donec dui neque, aliquam a rhoncus ut, euismod vel orci. Curabitur posuere augue et tortor faucibus aliquet. Cras efficitur orci non nunc rutrum egestas at sit amet odio. Nunc euismod magna sed sapien facilisis, sed commodo erat gravida. Sed ultrices, metus a dapibus tempus, est urna sodales elit, eget tincidunt justo risus at arcu. Phasellus sit amet hendrerit sem, id fermentum justo. Nam varius ultricies hendrerit. Curabitur aliquam tortor nec arcu condimentum, sit amet venenatis nisi scelerisque. Aliquam sodales risus vel dui congue malesuada. Quisque ut dolor venenatis, ultricies sapien sit amet, lobortis nisl.
+                </p>
+                <p class="lorem">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus risus, sollicitudin vitae dignissim in, malesuada non erat. Nulla eget libero facilisis enim placerat semper a ut sem. Ut vel porta odio. Donec dui neque, aliquam a rhoncus ut, euismod vel orci. Curabitur posuere augue et tortor faucibus aliquet. Cras efficitur orci non nunc rutrum egestas at sit amet odio. Nunc euismod magna sed sapien facilisis, sed commodo erat gravida. Sed ultrices, metus a dapibus tempus, est urna sodales elit, eget tincidunt justo risus at arcu. Phasellus sit amet hendrerit sem, id fermentum justo. Nam varius ultricies hendrerit. Curabitur aliquam tortor nec arcu condimentum, sit amet venenatis nisi scelerisque. Aliquam sodales risus vel dui congue malesuada. Quisque ut dolor venenatis, ultricies sapien sit amet, lobortis nisl.
+                </p>
+                <p class="lorem">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus risus, sollicitudin vitae dignissim in, malesuada non erat. Nulla eget libero facilisis enim placerat semper a ut sem. Ut vel porta odio. Donec dui neque, aliquam a rhoncus ut, euismod vel orci. Curabitur posuere augue et tortor faucibus aliquet. Cras efficitur orci non nunc rutrum egestas at sit amet odio. Nunc euismod magna sed sapien facilisis, sed commodo erat gravida. Sed ultrices, metus a dapibus tempus, est urna sodales elit, eget tincidunt justo risus at arcu. Phasellus sit amet hendrerit sem, id fermentum justo. Nam varius ultricies hendrerit. Curabitur aliquam tortor nec arcu condimentum, sit amet venenatis nisi scelerisque. Aliquam sodales risus vel dui congue malesuada. Quisque ut dolor venenatis, ultricies sapien sit amet, lobortis nisl.
+                </p>
+    <!--        </div>-->
+    <!--        <div style = "margin-left:25%;padding:1px 16px">-->
+                <br/><br/>
+                <button type="button" onclick="colorSwap()">Change Sidebar Color</button>
+                <div style ="line-height:10px">&nbsp;</div>
+                <button type ="button" id ="toggleButton">Toggle Lorem Ipsum</button>
+            </div>
+        </div>
+    </body>
+    
+</html>
