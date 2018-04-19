@@ -1,3 +1,4 @@
+
 root { 
     display: block;
 }
@@ -5,8 +6,8 @@ root {
 	text-align: center;
 }
 
-.sansSerif{
-    font-family: sans-serif;
+body{
+    font-family: "Roboto", Helvetica, sans-serif;
 }
 .sidebarMenu {
     max-width: 20%;
@@ -23,6 +24,7 @@ root {
     background-color: #fff;
     overflow-x: hidden;
     padding-top: 20px;
+    overflow: hidden;
 }
 .sidebar_content
 {
@@ -35,94 +37,70 @@ root {
     
 }
 
-.sidebar_link 
+.sidebar_link
 {
     display: inline-block;
     text-align: center;
     color: #333;
     width: 100%;
     margin: 1.875rem auto;
+    -webkit-transition-property: background; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: background;
+    transition-duration: 1s;
+
+
+}
+.sidebar_link.highlight:hover {
+    background: #593196;
+    
 }
 
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
+.highlight{
+    background : transparent;
+    -webkit-transition-property: background, color; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: background, color;
+    transition-duration: 1s;
 }
 
-/*li a.active {
-    background-color: #4CAF50;
+.highlight:hover{
+    background: #593196;
     color: white;
 }
 
-li a:hover:not(.active) {
+a {
+    display: block;
+    color: #593196;
+    padding: 16px 24px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+/*li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }*/
 button {
-    height: 30px;
+    height: 50px;
     width: 150px;
+    border-color: #593196; 
+    border-radius: 8px;
 }
-/*
-A Bootstrap 3.1 affix sidebar template
-from http://bootply.com
-
-This CSS code should follow the 'bootstrap.css'
-in your HTML file.
-
-license: MIT
-author: bootply.com
-*/
-
-body {
- padding-top:50px;
+.btn-lg, .btn-group-lg>.btn {
+    border-radius: 8px;
 }
 
-#masthead { 
- min-height:250px;
+h1 {
+    font-family: "Poppins";
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
 }
 
-#masthead h1 {
- font-size: 30px;
- line-height: 1;
- padding-top:20px;
-}
 
-#masthead .well {
- margin-top:8%;
-}
-
-@media screen and (min-width: 768px) {
-  #masthead h1 {
-    font-size: 50px;
-  }
-}
-
-.navbar-bright {
- background-color:#111155;
- color:#fff;
-}
-
-.affix-top,.affix{
- position: static;
-}
-
-@media (min-width: 979px) {
-  #sidebar.affix-top {
-    position: static;
-  	margin-top:30px;
-  	width:228px;
-  }
-  
-  #sidebar.affix {
-    position: fixed;
-    top:70px;
-    width:228px;
-  }
-}
-
-#sidebar li.active {
-  border:0 #eee solid;
-  border-right-width:5px;
-}

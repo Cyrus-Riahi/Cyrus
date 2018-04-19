@@ -3,11 +3,24 @@
     <head>
         <link rel="stylesheet" type="text/css" href="site.css">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
         <!-- jQuery library -->
+        
+
+<!-- generic includes -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             $(document).ready(function()
@@ -36,43 +49,44 @@
                 }
             }
         </script>
-        <div class ="container-fluid">
+        <div class ="container-fluid"> <!-- overall container -->
         
-            <div class ="sidebarMenu" id="sidebar">
+            <div class ="sidebarMenu" id="sidebar"> <!-- sidebar container -->
                 <div class="sidebar_content">
-                    <div class ="sidebar_link">
-                        <a href="index.html">
+                    <div class ="sidebar_link ">
+                        <a href="index.html" class = "highlight">
                             <h3 style = "line-height: 28px;">Home</h3>
                         </a>
                     </div>
                     <div class ="sidebar_link">
-                        <a href="contactRequest.php">
-                            <h3 style = "line-height: 28px;">SQL Test</h3>
-                        </a>
-                    </div>
-                    <div class ="sidebar_link">
-                        <a href="about.html">
-                            <h3 style = "line-height: 28px;">About</h3>
-                        </a>
-                    </div>
-                    <div class ="sidebar_link">
-                        <a href="contact.html">
+                        <a href="contactRequest.php"  class = "highlight">
                             <h3 style = "line-height: 28px;">Contact</h3>
                         </a>
                     </div>
+                    <div class ="sidebar_link">
+                        <a href="about.html"  class = "highlight">
+                            <h3 style = "line-height: 28px;">About</h3>
+                        </a>
+                    </div>
+<!--                    <div class ="sidebar_link">
+                        <a href="contact.html"  class = "highlight">
+                            <h3 style = "line-height: 28px;">Contact</h3>
+                        </a>
+                    </div>-->
 <!--                    <div class ="sidebar_link">
                         <a href="bootstrapTest.html">
                             <h3 style = "line-height: 28px;">Bootstrap Test</h3>
                         </a>
                     </div>-->
                 </div>
-            </div>
+            </div> <!-- end sidebar container-->
             <div class = "centered" style="margin-left:20%; padding:1px 16px; position: relative; display: block;">
-                <h1>Cyrus&emsp;Riahi</h1>
-                <h4 class="centered" style = "text-transform: uppercase;">
+                <!-- main body container -->
+                <h1>Cyrus &nbsp; Riahi</h1>
+                <h6 class="centered" style = "text-transform: uppercase;">
                     Software Engineer | San Francisco, CA<br/>
-                    I will be blown away if this gets me a job
-                </h4>
+                    The limit does not exist
+                </h6>
 <!--            </div>-->
         
 
@@ -93,10 +107,14 @@
     <!--        </div>-->
     <!--        <div style = "margin-left:25%;padding:1px 16px">-->
                 <br/><br/>
-                <button type="button" onclick="colorSwap()">Change Sidebar Color</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="colorSwap()">Menu Color</button>
+                <button type="button" class="btn btn-primary btn-lg" id = "toggleButton">Toggle Text</button>
                 <div style ="line-height:10px">&nbsp;</div>
-                <button type ="button" id ="toggleButton">Toggle Lorem Ipsum</button>
+                <br/><br/><br/>
+                
+                
             </div>
+            
         </div>
     </body>
     
