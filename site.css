@@ -15,7 +15,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 20%;
+    width: 200px;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,6 +25,7 @@ body{
     overflow-x: hidden;
     padding-top: 20px;
     overflow: hidden;
+
 }
 .sidebar_content
 {
@@ -69,7 +70,7 @@ body{
     color: white;
 }
 
-a {
+.sidebar_link a {
     display: block;
     color: #593196;
     padding: 16px 24px;
@@ -80,11 +81,38 @@ a:hover {
     text-decoration: none !important;
 }
 
-
-/*li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+a {
+    
+    color: #593196;
+    text-decoration: none;
+}
+/*svg{
+    fill: #000000;
 }*/
+.test3 .test2 .test1 .test{
+    background : transparent;
+    -webkit-transition-property: fill; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: fill;
+    transition-duration: 1s;
+}
+.test3:hover .test2 .test1 .test {
+    fill: #593196;
+}
+
+.highlight .highlight2 .highlight3 {
+    background : transparent;
+    -webkit-transition-property: fill; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: fill;
+    transition-duration: 1s;
+}
+
+.highlight:hover .highlight2 .highlight3 {
+    fill: white;
+}
+
+
 button {
     height: 50px;
     width: 150px;
@@ -101,6 +129,19 @@ h1 {
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.25rem;
+}
+
+.bg1 {
+    position: absolute;
+    left : -90px;
+    background-image: url(assets/1.jpg);
+    height: 200px;
+    width: 100%;
+}
+.bg2 {
+    background-color: rgba(89,49,150, 0.4);
+    height:100%;
+    width: 100%;
 }
 
 
