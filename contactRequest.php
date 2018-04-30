@@ -6,19 +6,7 @@
 </style>
 </head>
 <body>  
-<div>
-    <a href ="index.html">Back Home</a>
-</div>
-<h2>Famous Quotes</h2>
-<p><span class="error">* required field</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Quote: <input type="text" name="quote" value="">
-  <span class="error">* <?php echo $quoteErr;?></span>
-  <br><br>
-  Source: <input type="text" name="source" value="">
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
+
 
 <?php
 
@@ -37,22 +25,28 @@ echo "Connected successfully";
 
 // define variables and set to empty values
 $quoteErr = "";
-$quote = $source = "";
+$name = $email = $subject ="";
 
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["quote"])) {
-    $quoteErr = "Quote is required";
+  if (empty($_POST['name'])) {
+    $quoteErr = "Name is required";
   } else {
-    $quote = test_input($_POST["quote"]);
+    $name = test_input($_POST['name']);
     // check if name only contains letters and whitespace
   }
 
-  if (empty($_POST["source"])) {
-    $source = "";
+  if (empty($_POST['email'])) {
+    $email = "";
   } else {
-    $source = test_input($_POST["source"]);
+    $email = test_input($_POST['email']);
+  }
+  
+  if (empty($_POST['message'])) {
+    $message = "";
+  } else {
+    $message = test_input($_POST['message']);
   }
 
 }
@@ -65,34 +59,17 @@ function test_input($data) {
 }
 
 $sql = "";
-if(!empty($quote) && !empty($source))
+if(!empty($name) && !empty($email) && !empty($message))
 {
-    $sql = "INSERT INTO criahi (quote, source) VALUES ( \"" . $quote . "\", \"" . $source ."\");";
+    $sql = "INSERT INTO criahi (name, email, message) VALUES ( \"" . $name . "\", \"" . $email . "\", \"" . $message . "\");";
     
     mysqli_query($conn, $sql);
 }
 
-echo "<h2>Past Quotes:</h2>";
-
-$sql="SELECT * FROM criahi";
-
-if ($result=mysqli_query($conn,$sql))
-  {
-  // Fetch one and one row
-  while ($row=mysqli_fetch_row($result))
-    {
-    echo $row[0] . " - " . $row[1];
-    echo "<br><br>";
-    }
-  // Free result set
-  mysqli_free_result($result);
-}
-
-
 $conn->close();
+header('Location: index2.html#Contact');
 ?>
+
 
 </body>
 </html>
-
-
